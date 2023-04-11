@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Todo Sonho Tem um Preço</title>
+    <meta name="description" content />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/slicknav.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/nice-select.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer referrerpolicy="origin" src="js/s.js"></script>
+    <script nonce="2cdebbd9-cd3d-4ac2-ad2b-c47952ab2f88">
+      (function (w, d) {
+        !(function (bv, bw, bx, by) {
+          bv[bx] = bv[bx] || {};
+          bv[bx].executed = [];
+          bv.zaraz = { deferred: [], listeners: [] };
+          bv.zaraz.q = [];
+          bv.zaraz._f = function (bz) {
+            return function () {
+              var bA = Array.prototype.slice.call(arguments);
+              bv.zaraz.q.push({ m: bz, a: bA });
+            };
+          };
+          for (const bB of ["track", "set", "debug"])
+            bv.zaraz[bB] = bv.zaraz._f(bB);
+          bv.zaraz.init = () => {
+            var bC = bw.getElementsByTagName(by)[0],
+              bD = bw.createElement(by),
+              bE = bw.getElementsByTagName("title")[0];
+            bE && (bv[bx].t = bw.getElementsByTagName("title")[0].text);
+            bv[bx].x = Math.random();
+            bv[bx].w = bv.screen.width;
+            bv[bx].h = bv.screen.height;
+            bv[bx].j = bv.innerHeight;
+            bv[bx].e = bv.innerWidth;
+            bv[bx].l = bv.location.href;
+            bv[bx].r = bw.referrer;
+            bv[bx].k = bv.screen.colorDepth;
+            bv[bx].n = bw.characterSet;
+            bv[bx].o = new Date().getTimezoneOffset();
+            if (bv.dataLayer)
+              for (const bI of Object.entries(
+                Object.entries(dataLayer).reduce((bJ, bK) => ({
+                  ...bJ[1],
+                  ...bK[1],
+                }))
+              ))
+                zaraz.set(bI[0], bI[1], { scope: "page" });
+            bv[bx].q = [];
+            for (; bv.zaraz.q.length; ) {
+              const bL = bv.zaraz.q.shift();
+              bv[bx].q.push(bL);
+            }
+            bD.defer = !0;
+            for (const bM of [localStorage, sessionStorage])
+              Object.keys(bM || {})
+                .filter((bO) => bO.startsWith("_zaraz_"))
+                .forEach((bN) => {
+                  try {
+                    bv[bx]["z_" + bN.slice(7)] = JSON.parse(bM.getItem(bN));
+                  } catch {
+                    bv[bx]["z_" + bN.slice(7)] = bM.getItem(bN);
+                  }
+                });
+            bD.referrerPolicy = "origin";
+            bD.src =
+              "/cdn-cgi/zaraz/s.js?z=" +
+              btoa(encodeURIComponent(JSON.stringify(bv[bx])));
+            bC.parentNode.insertBefore(bD, bC);
+          };
+          ["complete", "interactive"].includes(bw.readyState)
+            ? zaraz.init()
+            : bv.addEventListener("DOMContentLoaded", zaraz.init);
+        })(w, d, "zarazData", "script");
+      })(window, document);
+    </script>
+  </head>
+  <body class="body-bg">
+    <header>
+      <div class="header-area header-transparent">
+        <div class="main-header header-sticky">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-xl-2 col-lg-2">
+                <div class="logo">
+                  <a href="index.html"
+                    ><img src="images/logo.png" style="height: 150px" alt
+                  /></a>
+                </div>
+              </div>
+              <div class="col-xl-10 col-lg-10">
+                <div class="main-menu f-right d-none d-lg-block">
+                  <nav>
+                    <ul id="navigation">
+                      <li><a href="index.html">Inicio</a></li>
+                      <li><a href="speakers.html">Oradores</a></li>
+                      <li><a href="schedule.html">Agenda</a></li>
+                      <li><a href="location.html">Localização</a></li>
+
+                      <li><a href="contact.html">Contacto</a></li>
+                      <li>
+                        <div
+                          class="header-right-btn f-right ml-15 d-none d-xl-inline-block"
+                        >
+                          <a href="#" class="header-btn"
+                            >Confirm Sua Presença<i class="ti-arrow-right"></i>
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="mobile_menu d-block d-lg-none"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="slider-area">
+        <div class="slider-active">
+          <div
+            class="single-slider slider-height hero-overly slider-bg1 d-flex align-items-center"
+          >
+            <div class="container position-relative">
+              <div class="row">
+                <div class="col-xxl-5 col-xl-7 col-lg-6 col-md-8 col-sm-10">
+                  <div class="hero-caption">
+                    <h1 data-animation="pulse" data-delay=".2s">
+                      <span>Conferência </span> Jovens Empresários
+                    </h1>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-footer">
+                <h4>1-2 de Julho 2023</h4>
+                <p>Centro de Conferências de Belas – CCB</p>
+                <a href="#" class="btn_01">Confirmar Presença</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="count-down-area top-padding">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-xl-4 col-lg-4 col-md-6">
+              <div class="section-tittle mb-40">
+                <h2>CONCEITO</h2>
+                <a href="#" class="btn_1 mt-20"
+                  >Confirmar Presença<i class="ti-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-7 col-md-12">
+              <div class="section-tittle mb-40" style="color: white">
+                <p style="color: white">
+                  <strong> Todo Sonho Tem Um Preço </strong>é uma conferência
+                  nacional de jovens empresários angolanos criada pela empresa
+                  Cumbi Group em 2017 para incentivar e impulsionar jovens a
+                  investirem nos seus sonhos e projectos empresariais
+                </p>
+                <p style="color: white">
+                  O projecto tem como objectivo central de potencializar e criar
+                  soluções para a classe empresarial angolana e formar uma rede
+                  de networking estável para todos os sectores.
+                </p>
+              </div>
+
+              <div class="count-down-wrapper">
+                <div class="row justify-content-between">
+                  <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4">
+                    <div class="single mb-30">
+                      <div class="single-counter">
+                        <span class="counter">2</span>
+                      </div>
+                      <div class="pera-count">
+                        <p>Dias do Evento</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4">
+                    <div class="single mb-30">
+                      <div class="single-counter">
+                        <span class="counter">3000</span>
+                      </div>
+                      <div class="pera-count">
+                        <p>Convidados</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4">
+                    <div class="single mb-30">
+                      <div class="single-counter">
+                        <span class="counter">6</span>
+                        <p class>+</p>
+                      </div>
+                      <div class="pera-count">
+                        <p>Patrocinadores</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="team-area section-padding">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="cl-xl-12">
+              <div
+                class="section-tittle text-center mb-40 d-flex justify-content-between flex-wrap align-items-center"
+              >
+                <h2>Oradores</h2>
+                <a href="#" class="btn_01"
+                  >Ver Todos<i class="ti-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="team-active">
+                <div class="single-team">
+                  <div class="team-img">
+                    <img src="images/team1.jpg" alt />
+
+                    <div class="team-social">
+                      <ul>
+                        <li>
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-globe"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="team-caption">
+                    <h3><a href="#">Marcus Down</a></h3>
+                    <p>Product Designer <span>@Colorlib</span></p>
+                  </div>
+                </div>
+                <div class="single-team">
+                  <div class="team-img">
+                    <img src="images/team2.jpg" alt />
+
+                    <div class="team-social">
+                      <ul>
+                        <li>
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-globe"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="team-caption">
+                    <h3><a href="#">Rick Shaw</a></h3>
+                    <p>Product Designer <span>@Colorlib</span></p>
+                  </div>
+                </div>
+                <div class="single-team">
+                  <div class="team-img">
+                    <img src="images/team3.jpg" alt />
+
+                    <div class="team-social">
+                      <ul>
+                        <li>
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-globe"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="team-caption">
+                    <h3><a href="#">Frank Senbeans</a></h3>
+                    <p>Product Designer <span>@Colorlib</span></p>
+                  </div>
+                </div>
+                <div class="single-team">
+                  <div class="team-img">
+                    <img src="images/team2.jpg" alt />
+
+                    <div class="team-social">
+                      <ul>
+                        <li>
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fas fa-globe"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="team-caption">
+                    <h3><a href="#">Marcus Down</a></h3>
+                    <p>Product Designer <span>@Colorlib</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-area">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-xxl-7 col-xl-7 col-lg-6 col-md-8">
+              <div class="about-img">
+                <img src="images/about1.jpg" alt />
+              </div>
+            </div>
+            <div class="offset-xxl-1 col-xxl-4 col-xl-5 col-lg-6 col-md-9">
+              <div class="about-caption">
+                <div class="section-tittle mb-25" style="color: white">
+                  <h2>
+                    <span>EVENTO <br /></span>
+                  </h2>
+                  <p style="color: white">
+                    O evento sucederá nos dias 1 e 2 de Junho no Centro de
+                    Conferências de Belas – CCB. As actividades incluem uma
+                    Feira para exibição de empresas, a Conferência com os
+                    oradores e culminará com uma Gala exclusiva no último dia
+                  </p>
+
+                  <p style="color: white">
+                    <strong>Dia 1 de Junho</strong> (Conferência: 09h – 14h /
+                    Feira: 09h – 18h)
+                  </p>
+                  <p style="color: white">
+                    <strong>Dia 2 de Junho</strong> (Conferência: 09h – 14h /
+                    Feira: 09h – 18h / Gala: 19h.30 – 23h.30)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 50px">
+            <div class="col-md-6">
+              <div class="section-tittle mb-25" style="color: white">
+                <h2>
+                  <span>CONFERÊNCIA <br /></span>
+                </h2>
+                <p style="color: white">
+                  A conferência será o momento de debates, workshop e
+                  apresentação de oradores nacionais e internacionais que
+                  partilharão suas experiências.
+                </p>
+                <p style="color: white">
+                  O evento será para 3000 pessoas e se fará acompanhar de um
+                  coffee break
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="section-tittle mb-25" style="color: white">
+                <h2>
+                  <span>FEIRA <br /></span>
+                </h2>
+                <p style="color: white">
+                  Para a feira, serão montados 100 stands entre 9m a 18m
+                  quadrado, onde as empresas estarão divididas por categorias,
+                  desde o quintal do CCB até o hall de entrada
+                </p>
+
+                <p style="color: white">
+                  A feira estará aberta das 8h às 18h e contará com uma praça de
+                  alimentação.
+                </p>
+
+                <p style="color: white">
+                  Cada empresa deverá trazer o seu merchandising.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="shedule-area section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5 col-lg-6 col-md-6">
+              <div class="section-tittle mb-30">
+                <h2>Hórarios</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-11">
+              <div class="nav-button">
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a
+                      class="nav-link active"
+                      id="nav-one-tab"
+                      data-bs-toggle="tab"
+                      href="#nav-one"
+                      role="tab"
+                      aria-controls="nav-one"
+                      aria-selected="true"
+                      >1 Julho</a
+                    >
+
+                    <a
+                      class="nav-link"
+                      id="nav-three-tab"
+                      data-bs-toggle="tab"
+                      href="#nav-three"
+                      role="tab"
+                      aria-controls="nav-three"
+                      aria-selected="false"
+                      >2 Julho</a
+                    >
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="tab-content" id="nav-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="nav-one"
+              role="tabpanel"
+              aria-labelledby="nav-one-tab"
+            >
+              <div class="row justify-content-center">
+                <div class="col-lg-11">
+                  <div class="shedule-wrapper">
+                    <div class="single-items">
+                      <div class="shedule-items">
+                        <div class="shedule-left">
+                          <div class="job-tittle">
+                            <a href="job_details.html"><h4>Conferência</h4></a>
+                          </div>
+                        </div>
+                        <div class="price">
+                          <span>09h – 14h / Feira: 09h – 18h</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="tab-pane fade"
+              id="nav-three"
+              role="tabpanel"
+              aria-labelledby="nav-three-tab"
+            >
+              <div class="row justify-content-center">
+                <div class="col-lg-11">
+                  <div class="shedule-wrapper">
+                    <div class="single-items">
+                      <div class="shedule-items">
+                        <div class="shedule-left">
+                          <div class="job-tittle">
+                            <a href="job_details.html"><h4>Conferência</h4></a>
+                          </div>
+                        </div>
+                        <div class="price">
+                          <span
+                            >09h – 14h / Feira: 09h – 18h / Gala: 19h.30 –
+                            23h.30</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="map-area">
+        <div id="contact-map" class="contact-map"></div>
+      </div>
+
+      <section class="brand-area top-padding">
+        <div class="container">
+          <div class="row wrapper-brand justify-content-center">
+            <div class="col-xl-5 col-lg-6 col-md-6">
+              <div class="section-tittle text-center mb-30">
+                <h2>Patrocinadores</h2>
+              </div>
+            </div>
+            <div class="col-xl-12">
+              <div class="brand-active pt-50 pb-40">
+                <div class="single-brand">
+                  <img src="images/brand1.png" alt />
+                </div>
+                <div class="single-brand">
+                  <img src="images/brand2.png" alt />
+                </div>
+                <div class="single-brand">
+                  <img src="images/brand3.png" alt />
+                </div>
+                <div class="single-brand">
+                  <img src="images/brand4.png" alt />
+                </div>
+                <div class="single-brand">
+                  <img src="images/brand2.png" alt />
+                </div>
+                <div class="single-brand">
+                  <img src="images/brand3.png" alt />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- <footer>
+      <div class="footer-area footer-padding">
+        <div class="footer-wrapper">
+          <div class="container">
+            <div class="row d-flex justify-content-between">
+              <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                <div class="single-footer-caption mb-50">
+                  <div class="single-footer-caption mb-30">
+                    <div class="footer-logo mb-25">
+                      <a href="index.html"
+                        ><img src="images/logo2_footer.png" alt
+                      /></a>
+                    </div>
+                    <div class="footer-tittle">
+                      <div class="footer-pera">
+                        <p>
+                          Duis aute irure dolor inasfa reprehenderit in
+                          voluptate velit esse cillum. Explicabo, maiores
+                          quisquam numquam quia reiciendis sit, accus antium
+                          atque ex animi perspiciatis ab odit earum assumenda
+                          aliquid santium.
+                        </p>
+                      </div>
+                    </div>
+
+                    <ul class="footer-social">
+                      <li>
+                        <a class="fb" href="https://bit.ly/sai4ull"
+                          ><i class="fab fa-facebook"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a class="yt" href="#"
+                          ><i class="fab fa-youtube"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a class="lnk" href="#"
+                          ><i class="fab fa-linkedin-in"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a class="ins" href="#"
+                          ><i class="fab fa-instagram"></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-4 col-sm-5">
+                <div class="single-footer-caption mb-50">
+                  <div class="footer-tittle">
+                    <h4>Contact Us</h4>
+                    <ul>
+                      <li>
+                        <a href="#">3968 Carson Street, San Diego, CA 92101</a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><span
+                            class="__cf_email__"
+                            data-cfemail="4920272f26092c3f2c273d26672a2624"
+                            >[email protected]</span
+                          ></a
+                        >
+                      </li>
+                      <li class="number"><a href="#">10 (85) 980 3673</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-8 col-sm-11">
+                <div class="single-footer-caption mb-50">
+                  <div class="footer-tittle">
+                    <h4>Subscribe Newsletter</h4>
+                    <p>
+                      raising a heavy fur muff that covered the whole of her
+                      lower arm towards the viewer.
+                    </p>
+                  </div>
+
+                  <div class="footer-form">
+                    <div id="mc_embed_signup">
+                      <form
+                        target="_blank"
+                        action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&id=92a4423d01"
+                        method="get"
+                        class="subscribe_form relative mail_part"
+                        novalidate="true"
+                      >
+                        <input
+                          type="email"
+                          name="EMAIL"
+                          id="newsletter-form-email"
+                          placeholder="  Enter your email"
+                        />
+                        <div class="form-icon">
+                          <button
+                            type="submit"
+                            name="submit"
+                            id="newsletter-submit"
+                            class="email_icon newsletter-submit button-contactForm"
+                          >
+                            Subscribe
+                          </button>
+                        </div>
+                        <div class="mt-10 info"></div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom-area">
+            <div class="container">
+              <div class="footer-border">
+                <div class="row d-flex align-items-center">
+                  <div class="col-xl-12">
+                    <div class="footer-copy-right text-center">
+                      <p>
+                        Copyright ©
+                        <script
+                          data-cfasync="false"
+                          src="js/email-decode.min.js"
+                        ></script>
+                        <script>
+                          document.write(new Date().getFullYear());
+                        </script>
+                        2023 All rights reserved | This template is made with
+                        <i
+                          class="fa fa-heart color-danger"
+                          aria-hidden="true"
+                        ></i>
+                        by
+                        <a
+                          href="https://colorlib.com"
+                          target="_blank"
+                          rel="nofollow noopener"
+                          >Colorlib</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer> -->
+
+    <div id="back-top">
+      <a class="wrapper" title="Go to Top" href="#">
+        <div class="arrows-container">
+          <div class="arrow arrow-one"></div>
+          <div class="arrow arrow-two"></div>
+        </div>
+      </a>
+    </div>
+
+    <script src="js/modernizr-3.5.0.min.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB13ZAvCezMx5TETYIiGlzVIq65Mc2FG5g"></script>
+
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
