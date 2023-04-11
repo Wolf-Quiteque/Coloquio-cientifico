@@ -18,6 +18,98 @@
     <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/nice-select.css" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* Hide the modal by default */
+      #modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      /* Style the modal content */
+      #modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+      }
+
+      /* Style the modal header */
+      #modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      /* Style the modal close button */
+      #close-btn {
+        font-size: 30px;
+        font-weight: bold;
+        color: #aaa;
+        cursor: pointer;
+        border: none;
+        background: none;
+      }
+
+      /* Add hover effect to the close button */
+      #close-btn:hover {
+        color: black;
+      }
+
+      /* Style the form labels */
+      form label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      /* Style the form inputs */
+      form input[type="text"],
+      form input[type="email"],
+      form input[type="tel"],
+      form textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+
+      /* Style the modal body */
+      #modal-body {
+        margin-bottom: 20px;
+      }
+
+      /* Add animation to the modal */
+      #modal.show {
+        display: block;
+        animation: slide-in 0.5s forwards;
+      }
+
+      /* Define the slide-in animation */
+      @keyframes slide-in {
+        from {
+          opacity: 0;
+          transform: translateY(-100%);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+
     <script defer referrerpolicy="origin" src="js/s.js"></script>
     <script nonce="2cdebbd9-cd3d-4ac2-ad2b-c47952ab2f88">
       (function (w, d) {
@@ -103,7 +195,7 @@
                 <div class="main-menu f-right d-none d-lg-block">
                   <nav>
                     <ul id="navigation">
-                      <li><a href="index.html">Inicio</a></li>
+                      <li><a href="index.html">Início</a></li>
                       <li><a href="speakers.html">Oradores</a></li>
                       <li><a href="schedule.html">Agenda</a></li>
                       <li><a href="location.html">Localização</a></li>
@@ -113,8 +205,8 @@
                         <div
                           class="header-right-btn f-right ml-15 d-none d-xl-inline-block"
                         >
-                          <a href="#" class="header-btn"
-                            >Confirm Sua Presença<i class="ti-arrow-right"></i>
+                          <a href="#" class="header-btn modal-btn"
+                            >Confirma Sua Presença<i class="ti-arrow-right"></i>
                           </a>
                         </div>
                       </li>
@@ -151,7 +243,7 @@
               <div class="hero-footer">
                 <h4>1-2 de Julho 2023</h4>
                 <p>Centro de Conferências de Belas – CCB</p>
-                <a href="#" class="btn_01">Confirmar Presença</a>
+                <a href="#" class="btn_01 modal-btn">Confirma Presença</a>
               </div>
             </div>
           </div>
@@ -165,7 +257,7 @@
               <div class="section-tittle mb-40">
                 <h2>CONCEITO</h2>
                 <a href="#" class="btn_1 mt-20"
-                  >Confirmar Presença<i class="ti-arrow-right"></i
+                  >Confirma Presença<i class="ti-arrow-right"></i
                 ></a>
               </div>
             </div>
@@ -372,48 +464,86 @@
               </div>
             </div>
           </div>
-          <div class="row" style="margin-top: 50px">
-            <div class="col-md-6">
-              <div class="section-tittle mb-25" style="color: white">
-                <h2>
-                  <span>CONFERÊNCIA <br /></span>
-                </h2>
-                <p style="color: white">
-                  A conferência será o momento de debates, workshop e
-                  apresentação de oradores nacionais e internacionais que
-                  partilharão suas experiências.
-                </p>
-                <p style="color: white">
-                  O evento será para 3000 pessoas e se fará acompanhar de um
-                  coffee break
-                </p>
+        </main>
+          <main style='  background-image: url("images/starry-night-sky.png"); 
+          
+          height: 100%; 
+          background-position: center; 
+          background-repeat: no-repeat; 
+          background-size: cover; ' >
+          <section class="container">
+            <div class="row" style="margin-top: 200px">
+              <div class="col-md-6 text-center">
+                <div class="section-tittle mb-25" style="color: white">
+                  <h2>
+                    <span>CONFERÊNCIA <br /></span>
+                  </h2>
+                  <p style="color: white">
+                    A conferência será o momento de debates, workshop e
+                    apresentação de oradores nacionais e internacionais que
+                    partilharão suas experiências.
+                  </p>
+                  <p style="color: white">
+                    O evento será para 3000 pessoas e se fará acompanhar de um
+                    coffee break
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6 text-center">
+                <div class="section-tittle mb-25" style="color: white">
+                  <h2>
+                    <span>FEIRA <br /></span>
+                  </h2>
+                  <p style="color: white">
+                    Para a feira, serão montados 100 stands entre 9m a 18m
+                    quadrado, onde as empresas estarão divididas por categorias,
+                    desde o quintal do CCB até o hall de entrada
+                  </p>
+
+                  <p style="color: white">
+                    A feira estará aberta das 8h às 18h e contará com uma praça
+                    de alimentação.
+                  </p>
+
+                  <p style="color: white">
+                    Cada empresa deverá trazer o seu merchandising.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div
+                  class="section-tittle mb-25 text-center"
+                  style="color: white"
+                >
+                  <h2 class="text-center">
+                    <span>GALA <br /></span>
+                  </h2>
+                  <p style="color: white">
+                    A gala será um momento intimista com buffet e bar aberto,
+                    para 400 pessoas, onde iremos homenagear os patrocinadores,
+                    empresas que apoiam a juventude, empresas de
+                  </p>
+
+                  <p style="color: white">
+                    destaque, oradores e o Executivo angolano. O momento servirá
+                    para maior criação de networking entre os grandes
+                    fomentadores de emprego e o estado angolano, onde o acesso
+                    será restrito, ou seja, por convite direccionado.
+                  </p>
+
+                  <p style="color: white">
+                    Ocorrerá um leilão, cujo os fundos arrecadados serão para
+                    apoiar uma instituição carenciada
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="section-tittle mb-25" style="color: white">
-                <h2>
-                  <span>FEIRA <br /></span>
-                </h2>
-                <p style="color: white">
-                  Para a feira, serão montados 100 stands entre 9m a 18m
-                  quadrado, onde as empresas estarão divididas por categorias,
-                  desde o quintal do CCB até o hall de entrada
-                </p>
-
-                <p style="color: white">
-                  A feira estará aberta das 8h às 18h e contará com uma praça de
-                  alimentação.
-                </p>
-
-                <p style="color: white">
-                  Cada empresa deverá trazer o seu merchandising.
-                </p>
-              </div>
-            </div>
-          </div>
+          </section>
         </div>
       </section>
-
+    </main>
+    <main>
       <section class="shedule-area section-padding">
         <div class="container">
           <div class="row">
@@ -716,6 +846,31 @@
       </a>
     </div>
 
+    <div id="modal">
+      <div id="modal-content">
+        <!-- Modal header with close button -->
+        <div id="modal-header">
+          <h3>Modal Title</h3>
+          <button id="close-btn">&times;</button>
+        </div>
+        <!-- Modal body with user inputs -->
+        <div id="modal-body">
+          <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" />
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" />
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" />
+            <label for="image">Image:</label>
+            <input type="file" id="image" name="image" />
+            <label for="textarea">Tell us about yourself:</label>
+            <textarea id="textarea" name="textarea" rows="3"></textarea>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <script src="js/modernizr-3.5.0.min.js"></script>
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -741,5 +896,31 @@
 
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      // Get the modal and the button that opens it
+      var modal = document.getElementById("modal");
+      var btn = document.getElementByClass("modal-btn");
+
+      // Get the close button and the modal content
+      var closeBtn = document.getElementById("close-btn");
+      var modalContent = document.getElementById("modal-content");
+
+      // When the user clicks on the button, show the modal
+      btn.onclick = function () {
+        modal.classList.add("show");
+      };
+
+      // When the user clicks on the close button, hide the modal
+      closeBtn.onclick = function () {
+        modal.classList.remove("show");
+      };
+
+      // When the user clicks outside the modal, hide it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.classList.remove("show");
+        }
+      };
+    </script>
   </body>
 </html>
