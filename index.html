@@ -108,6 +108,45 @@
           transform: translateY(0);
         }
       }
+
+
+      .team-card {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.card-img-top {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 30px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card-title,
+.card-text {
+  margin-bottom: 20px;
+}
+
+.card:hover .card-img-top {
+  opacity: 0.5;
+}
+
+.card:hover .card-overlay {
+  opacity: 1;
+}
+
     </style>
 
     <script defer referrerpolicy="origin" src="js/s.js"></script>
@@ -206,7 +245,7 @@
                           class="header-right-btn f-right ml-15 d-none d-xl-inline-block"
                         >
                           <a href="#" class="header-btn modal-btn"
-                            >Confirma Sua Presença<i class="ti-arrow-right"></i>
+                            >Inscreve-se<i class="ti-arrow-right"></i>
                           </a>
                         </div>
                       </li>
@@ -231,24 +270,22 @@
       <section class="slider-area">
         <div class="slider-active">
           <div
-            class="single-slider slider-height hero-overly slider-bg1 d-flex align-items-center"
+            class="single-slider slider-height slider-bg1 d-flex align-items-center"
           >
             <div class="container position-relative">
               <div class="row">
-                <div class="col-xxl-5 col-xl-7 col-lg-6 col-md-8 col-sm-10">
+                <div class="col-md-12 text-center" style="margin-top:500px">
                   <div class="hero-caption">
-                    <h1 data-animation="pulse" data-delay=".2s">
-                      <span>Conferência </span> Jovens Empresários
-                    </h1>
+                    <a href="#" class="btn_01 modal-btn inscrever" style="color:#000; background: #ffbd00;font-size:25px;"><span style="color:#000;" > Inscreve-se</span></a>
                   </div>
                 </div>
               </div>
 
-              <div class="hero-footer">
+              <!-- <div class="hero-footer" style="margin-top:1000px">
                 <h4>1-2 de Julho 2023</h4>
                 <p>Centro de Conferências de Belas – CCB</p>
                 <a href="#" class="btn_01 modal-btn">Confirma Presença</a>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -264,7 +301,7 @@
               <div class="section-tittle mb-40">
                
                 <a href="#" class="btn_1 mt-20 " style="margin-top: 30px; background-color: #fff;"
-                  >Confirma Presença<i class="ti-arrow-right"></i
+                  >Inscreve-se<i class="ti-arrow-right"></i
                 ></a>
               </div>
             </div>
@@ -332,6 +369,10 @@
     background-size: cover; ' >
       <section class=" container team-area section-padding">
         <div class="container">
+
+
+
+
           <div class="row justify-content-center">
             <div class="cl-xl-12">
               <div
@@ -347,29 +388,19 @@
           <div class="row justify-content-center">
             <div class="col-lg-10">
               <div class="team-active">
-                <div class="single-team">
-                  <div class="team-img">
-                    <img src="images/team1.jpg" alt />
-
-                    <div class="team-social">
-                      <ul>
-                        <li>
-                          <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fab fa-twitter"></i></a>
-                        </li>
-                        <li>
-                          <a href="#"><i class="fas fa-globe"></i></a>
-                        </li>
-                      </ul>
+                <!-- <div class="single-team">
+                   <div class="card team-card">
+                      <img class="card-img-top" src="https://via.placeholder.com/300x300" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">John Doe</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget ligula eu massa dignissim iaculis vel et mauris.</p>
+                        <div class="card-overlay">
+                          <h5 class="card-title">John Doe</h5>
+                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget ligula eu massa dignissim iaculis vel et mauris.</p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div class="team-caption">
-                    <h3><a href="#">Marcus Down</a></h3>
-                    <p>Product Designer <span>@Colorlib</span></p>
-                  </div>
-                </div>
+                </div> -->
                 <div class="single-team">
                   <div class="team-img">
                     <img src="images/team2.jpg" alt />
@@ -442,6 +473,7 @@
               </div>
             </div>
           </div>
+
         </div>
       </section>
     </main>
