@@ -115,6 +115,7 @@
   overflow: hidden;
   text-align: center;
   margin-bottom: 30px;
+  opacity: 1;
 }
 
 .card-img-top {
@@ -145,6 +146,12 @@
 
 .card:hover .card-overlay {
   opacity: 1;
+}
+
+.card-title.back,
+.card-text {
+  opacity: 1;
+  color: white;
 }
 
     </style>
@@ -388,19 +395,22 @@
           <div class="row justify-content-center">
             <div class="col-lg-10">
               <div class="team-active">
-                <!-- <div class="single-team">
-                   <div class="card team-card">
-                      <img class="card-img-top" src="https://via.placeholder.com/300x300" alt="Card image cap">
+                <div class="single-team" >
+                   <div class="card team-card" >
+                      <img class="card-img-top" src="images/salimoAbdula.png" alt="Card image cap">
                       <div class="card-body">
-                        <h5 class="card-title">John Doe</h5>
-                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget ligula eu massa dignissim iaculis vel et mauris.</p>
+                        <h5 class="card-title mt-3">Salimo Abdul</h5>
+                        <img style="margin-top: -30px;" src="images/salimoAbdulaLocal.png" class="img-fluid" />
                         <div class="card-overlay">
-                          <h5 class="card-title">John Doe</h5>
-                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget ligula eu massa dignissim iaculis vel et mauris.</p>
-                        </div>
+                          <h5 class="card-title back">SALIMO AMAD ABDULA</h5>
+                          <p class="card-text" style="text-align: justify;">nasceu a 18 de Junho de 1963, em Quelimane, província da Zambézia. Empresário de sucesso e líder da Intelec Holdings (grupo empresarial com 20 anos de operações em Moçambique).
+                           </p>
+                           <p class="card-text" style="text-align: justify;">Presidente de Conselho de Administração da Vodacom Moçambique, entre 2017 e 2020, cargo que também ocupou entre 2009 e 2011, bem como entre 2013 e 2015;
+                            E outros.</p>
+                       </div>
                       </div>
                     </div>
-                </div> -->
+                </div>
                 <div class="single-team">
                   <div class="team-img">
                     <img src="images/team2.jpg" alt />
