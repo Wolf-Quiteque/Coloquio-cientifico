@@ -224,7 +224,7 @@
       })(window, document);
     </script>
   </head>
-  <body class="body-bg">
+  <body class="body-bg" style="visibility: hidden;">
     <header>
       <div class="header-area header-transparent">
         <div class="main-header header-sticky">
@@ -1015,5 +1015,11 @@
         }
       };
     </script>
+
+<script>
+  window.addEventListener('load', function() {
+    document.body.style.visibility = 'visible';
+  });
+</script>
   </body>
 </html>
