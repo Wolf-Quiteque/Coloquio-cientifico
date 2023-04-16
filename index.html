@@ -713,7 +713,16 @@
                    <label for="jobTitle" style="color:white">Função</label>
                    <input type="text" class="form-control" id="jobTitle" name="jobTitle">
                  </div></div>
-                
+                 
+                 <div class="col-md-12"> <div class="form-group">
+                  <label for="numParticipants" style="color:white">Tamanho da empresa</label>
+                  <select class="form-control">
+                    <option>Micro</option>
+                    <option>Média</option>
+                    <option>Grande</option>
+
+                  </select>
+                </div></div>
                
                  <div class="col-md-6"> <div class="form-group">
                    <label for="numParticipants" style="color:white">Nº de participantes</label>
@@ -1008,14 +1017,19 @@
   $("#myForm").submit(function(event) {
   event.preventDefault();
   var form = $(this);
+  var url = "https://glabapi.vercel.app/api/cumbi"; // Replace with your API endpoint URL			
+  var formData = form.serializeArray();
 
-  console.log(form);
-  return;
-  var url = "http:localhost:4000/api/cumbi"; // Replace with your API endpoint URL			
+  console.log(formData)
+  var jsonFormData = {};
+    $.each(formData, function() {
+      jsonFormData[this.name] = this.value;
+    });
+    var jsonData = JSON.stringify(jsonFormData);
   $.ajax({
 				type: "POST",
 				url: url,
-				data: form.serialize(),
+				data: jsonData,
 				success: function(data) {
 					alert("Enviado com succeso!");
 				},
