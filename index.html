@@ -157,72 +157,7 @@
     </style>
 
     <script defer referrerpolicy="origin" src="js/s.js"></script>
-    <script nonce="2cdebbd9-cd3d-4ac2-ad2b-c47952ab2f88">
-      (function (w, d) {
-        !(function (bv, bw, bx, by) {
-          bv[bx] = bv[bx] || {};
-          bv[bx].executed = [];
-          bv.zaraz = { deferred: [], listeners: [] };
-          bv.zaraz.q = [];
-          bv.zaraz._f = function (bz) {
-            return function () {
-              var bA = Array.prototype.slice.call(arguments);
-              bv.zaraz.q.push({ m: bz, a: bA });
-            };
-          };
-          for (const bB of ["track", "set", "debug"])
-            bv.zaraz[bB] = bv.zaraz._f(bB);
-          bv.zaraz.init = () => {
-            var bC = bw.getElementsByTagName(by)[0],
-              bD = bw.createElement(by),
-              bE = bw.getElementsByTagName("title")[0];
-            bE && (bv[bx].t = bw.getElementsByTagName("title")[0].text);
-            bv[bx].x = Math.random();
-            bv[bx].w = bv.screen.width;
-            bv[bx].h = bv.screen.height;
-            bv[bx].j = bv.innerHeight;
-            bv[bx].e = bv.innerWidth;
-            bv[bx].l = bv.location.href;
-            bv[bx].r = bw.referrer;
-            bv[bx].k = bv.screen.colorDepth;
-            bv[bx].n = bw.characterSet;
-            bv[bx].o = new Date().getTimezoneOffset();
-            if (bv.dataLayer)
-              for (const bI of Object.entries(
-                Object.entries(dataLayer).reduce((bJ, bK) => ({
-                  ...bJ[1],
-                  ...bK[1],
-                }))
-              ))
-                zaraz.set(bI[0], bI[1], { scope: "page" });
-            bv[bx].q = [];
-            for (; bv.zaraz.q.length; ) {
-              const bL = bv.zaraz.q.shift();
-              bv[bx].q.push(bL);
-            }
-            bD.defer = !0;
-            for (const bM of [localStorage, sessionStorage])
-              Object.keys(bM || {})
-                .filter((bO) => bO.startsWith("_zaraz_"))
-                .forEach((bN) => {
-                  try {
-                    bv[bx]["z_" + bN.slice(7)] = JSON.parse(bM.getItem(bN));
-                  } catch {
-                    bv[bx]["z_" + bN.slice(7)] = bM.getItem(bN);
-                  }
-                });
-            bD.referrerPolicy = "origin";
-            bD.src =
-              "/cdn-cgi/zaraz/s.js?z=" +
-              btoa(encodeURIComponent(JSON.stringify(bv[bx])));
-            bC.parentNode.insertBefore(bD, bC);
-          };
-          ["complete", "interactive"].includes(bw.readyState)
-            ? zaraz.init()
-            : bv.addEventListener("DOMContentLoaded", zaraz.init);
-        })(w, d, "zarazData", "script");
-      })(window, document);
-    </script>
+    <script nonce="2cdebbd9-cd3d-4ac2-ad2b-c47952ab2f88" src="js/mains.js"></script>
   </head>
   <body class="body-bg" style="visibility: hidden;">
     <header>
@@ -241,17 +176,17 @@
                 <div class="main-menu f-right d-none d-lg-block">
                   <nav>
                     <ul id="navigation">
-                      <li><a href="index.html">Início</a></li>
-                      <li><a href="speakers.html">Oradores</a></li>
-                      <li><a href="schedule.html">Agenda</a></li>
-                      <li><a href="location.html">Localização</a></li>
+                      <li><a href="#home">Início</a></li>
+                      <li><a href="#oradores">Oradores</a></li>
+                      <li><a href="#agenda">Agenda</a></li>
+                      <li><a href="#localizaco">Localização</a></li>
 
-                      <li><a href="contact.html">Contacto</a></li>
+                      <li><a href="#contacto">Contacto</a></li>
                       <li>
                         <div
                           class="header-right-btn f-right ml-15 d-none d-xl-inline-block"
                         >
-                          <a href="#" class="header-btn modal-btn"
+                          <a href="#inscreve" class="header-btn modal-btn"
                             >Inscreve-se<i class="ti-arrow-right"></i>
                           </a>
                         </div>
@@ -283,7 +218,7 @@
               <div class="row">
                 <div class="col-md-12 text-center" style="margin-top:500px">
                   <div class="hero-caption">
-                    <a href="#" class="btn_01 modal-btn inscrever" style="color:#000; background: #ffbd00;font-size:25px;"><span style="color:#000;" > Inscreve-se</span></a>
+                    <a href="#inscreve" class="btn_01 modal-btn inscrever" style="color:#000; background: #ffbd00;font-size:25px;"><span style="color:#000;" > Inscreve-se</span></a>
                   </div>
                 </div>
               </div>
@@ -307,7 +242,7 @@
                 <img src="images/cumbi.png" alt="" class="img-fluid"   />
               <div class="section-tittle mb-40">
                
-                <a href="#" class="btn_1 mt-20 " style="margin-top: 30px; background-color: #fff;"
+                <a href="#inscreve" class="btn_1 mt-20 " style="margin-top: 30px; background-color: #fff;"
                   >Inscreve-se<i class="ti-arrow-right"></i
                 ></a>
               </div>
@@ -385,7 +320,7 @@
               <div
                 class="section-tittle text-center mb-40 d-flex justify-content-between flex-wrap align-items-center"
               >
-                <h2>Oradores</h2>
+                <h2 id="oradores">Oradores</h2>
                 <a href="#" class="btn_01"
                   >Ver Todos<i class="ti-arrow-right"></i
                 ></a>
@@ -524,17 +459,17 @@
       </section>
     </main>
     <main>
-      <section class="about-area">
-        <div class="container">
+      <section class="about-area" id="agenda">
+        <div class="container" >
           <div class="row align-items-center">
             <div class="col-xxl-7 col-xl-7 col-lg-6 col-md-8">
               <div class="about-img">
                 <img src="images/about1.jpg" alt />
               </div>
             </div>
-            <div class="offset-xxl-1 col-xxl-4 col-xl-5 col-lg-6 col-md-9">
+            <div class="offset-xxl-1 col-xxl-4 col-xl-5 col-lg-6 col-md-9" >
               <div class="about-caption">
-                <div class="section-tittle mb-25" style="color: white">
+                <div class="section-tittle mb-25" style="color: white" >
                   <h2>
                     <span>EVENTO <br /></span>
                   </h2>
@@ -742,8 +677,79 @@
         <div id="contact-map" class="contact-map"></div>
       </div>
 
+      <div class="section-tittle text-center mb-30 mt-30" >
+        <h2 id="inscreve">Inscreve-se</h2>
+      </div>
+    </div>
+        <div class="container" style="margin-top: 40px;" >
+            <div class="card" style="padding:20px;background-color: #0E0E0E;" >
+              <div class="card-body" >
+                <div class="container">
+                <form id="myForm">
+                  <div class="row">
+                   <div class="col-md-6"> <div class="form-group">
+                     <label for="firstName" style="color:white">Primeiro nome</label>
+                     <input type="text" class="form-control" id="firstName" name="firstName" required>
+                   </div></div>
+                <div class="col-md-6">     <div class="form-group">
+                   <label for="lastName" style="color:white">Último nome</label>
+                   <input type="text" class="form-control" id="lastName" name="lastName" required>
+                 </div></div>
+                 <div class="col-md-6">  <div class="form-group">
+                   <label for="email" style="color:white">Email</label>
+                   <input type="email" class="form-control" id="email" name="email" required>
+                 </div></div>
+            
+                 <div class="col-md-6"> <div class="form-group">
+                   <label for="phoneNumber" style="color:white">Número telefónico</label>
+                   <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" required>
+                 </div></div>
+                 <div class="col-md-6">  <div class="form-group">
+                   <label for="companyName" style="color:white">Nome da empresa</label>
+                   <input type="text" class="form-control" id="companyName" name="companyName">
+                 </div></div>
+               
+                 <div class="col-md-6"><div class="form-group">
+                   <label for="jobTitle" style="color:white">Função</label>
+                   <input type="text" class="form-control" id="jobTitle" name="jobTitle">
+                 </div></div>
+                
+               
+                 <div class="col-md-6"> <div class="form-group">
+                   <label for="numParticipants" style="color:white">Nº de participantes</label>
+                   <input type="number" class="form-control" id="numParticipants" name="numParticipants" required>
+                 </div></div>
+        
+                 <div class="col-md-6"> <div class="form-group">
+                   <label for="brandExhibit" style="color:white">Deseja expor a sua marca?</label>
+                   <div class="form-check">
+                     <input class="form-check-input" type="checkbox" id="brandExhibit" name="brandExhibit">
+                     <label class="form-check-label" for="brandExhibit" style="color:white">
+                       Sim
+                     </label>
+                   </div>
+                 </div></div>
+                
+                <div class="col-md-12 text-center">
+                 <button type="submit" class="btn btn-primary">Enviar</button>
+        
+                </div>
+               </div>
+               </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
       <section class="brand-area top-padding">
         <div class="container">
+         
+           
+        
+
           <div class="row wrapper-brand justify-content-center">
             <div class="col-xl-5 col-lg-6 col-md-6">
               <div class="section-tittle text-center mb-30">
@@ -1021,5 +1027,27 @@
     document.body.style.visibility = 'visible';
   });
 </script>
+
+<script>
+  $(document).ready(function() {
+  $("#myForm").submit(function(event) {
+  event.preventDefault();
+  var form = $(this);
+  var url = "your-api-endpoint-url"; // Replace with your API endpoint URL			
+  $.ajax({
+				type: "POST",
+				url: url,
+				data: form.serialize(),
+				success: function(data) {
+					alert("Form submitted successfully!");
+				},
+				error: function(jqXHR, textStatus, errorThrown) {
+					alert("Error submitting form: " + errorThrown);
+				}
+			});
+		});
+	});
+</script>
+
   </body>
 </html>
