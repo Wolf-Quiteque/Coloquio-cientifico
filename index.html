@@ -945,31 +945,6 @@
       </a>
     </div>
 
-    <div id="modal">
-      <div id="modal-content">
-        <!-- Modal header with close button -->
-        <div id="modal-header">
-          <h3>Modal Title</h3>
-          <button id="close-btn">&times;</button>
-        </div>
-        <!-- Modal body with user inputs -->
-        <div id="modal-body">
-          <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" />
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" />
-            <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" />
-            <label for="image">Image:</label>
-            <input type="file" id="image" name="image" />
-            <label for="textarea">Tell us about yourself:</label>
-            <textarea id="textarea" name="textarea" rows="3"></textarea>
-          </form>
-        </div>
-      </div>
-    </div>
-
     <script src="js/modernizr-3.5.0.min.js"></script>
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -1033,13 +1008,16 @@
   $("#myForm").submit(function(event) {
   event.preventDefault();
   var form = $(this);
-  var url = "your-api-endpoint-url"; // Replace with your API endpoint URL			
+
+  console.log(form);
+  return;
+  var url = "http:localhost:4000/api/cumbi"; // Replace with your API endpoint URL			
   $.ajax({
 				type: "POST",
 				url: url,
 				data: form.serialize(),
 				success: function(data) {
-					alert("Form submitted successfully!");
+					alert("Enviado com succeso!");
 				},
 				error: function(jqXHR, textStatus, errorThrown) {
 					alert("Error submitting form: " + errorThrown);
