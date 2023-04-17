@@ -715,11 +715,11 @@
                  </div></div>
                  
                  <div class="col-md-12"> <div class="form-group">
-                  <label for="numParticipants" style="color:white">Tamanho da empresa</label>
-                  <select class="form-control">
-                    <option>Micro</option>
-                    <option>Média</option>
-                    <option>Grande</option>
+                  <label for="numParticipants"  style="color:white">Tamanho da empresa</label>
+                  <select class="form-control" id="companySize">
+                    <option value="Micro">Micro</option>
+                    <option value="Média">Média</option>
+                    <option value="Grane">Grande</option>
 
                   </select>
                 </div></div>
@@ -1017,28 +1017,52 @@
   $("#myForm").submit(function(event) {
   event.preventDefault();
   var form = $(this);
-  var url = "https://glabapi.vercel.app/api/cumbi"; // Replace with your API endpoint URL			
-  var formData = form.serializeArray();
+  var url = "https://glabapi-emainvest.vercel.app/api/cumbi"; // Replace with your API endpoint URL			
+  const firstName = document.getElementById("firstName").value;
+const lastName = document.getElementById("lastName").value;
+const email = document.getElementById("email").value;
+const phoneNumber = document.getElementById("phoneNumber").value;
+const companyName = document.getElementById("companyName").value;
+const jobTitle = document.getElementById("jobTitle").value;
+const numParticipants = document.getElementById("numParticipants").value;
+const brandExhibit = document.getElementById("brandExhibit").value;
+const companySize = document.getElementById("companySize").value;
 
-  console.log(formData)
-  var jsonFormData = {};
-    $.each(formData, function() {
-      jsonFormData[this.name] = this.value;
-    });
-    var jsonData = JSON.stringify(jsonFormData);
+
+// Make an AJAX request to the server
+
+
+// Set the data to be sent in the request body
+const data = JSON.stringify({ firstName,
+lastName,
+email,
+phoneNumber,
+companyName,
+jobTitle,
+numParticipants,
+companySize,
+brandExhibit,});
+
+
+
   $.ajax({
-				type: "POST",
-				url: url,
-				data: jsonData,
+  	    url: url,  
+       method: 'POST',
+       contentType: 'application/json',
+				data: data,
 				success: function(data) {
 					alert("Enviado com succeso!");
+          location.reload();
 				},
 				error: function(jqXHR, textStatus, errorThrown) {
-					alert("Error submitting form: " + errorThrown);
+					alert("Tenta Novamente!");
 				}
 			});
 		});
 	});
+
+    
+
 </script>
 
   </body>
