@@ -743,8 +743,11 @@
                 
                 <div class="col-md-12 text-center">
                  <button type="submit" class="btn btn-primary">Enviar</button>
+
+                 <span class="text-danger">Certifique-se de verificar sua caixa de entrada (email) ou spam.</span>
         
                 </div>
+
                </div>
                </form>
               </div>
@@ -1060,7 +1063,7 @@ brandExhibit,});
        contentType: 'application/json',
 				data: data,
 				success: function(data) {
-					alert("Enviado com succeso!");
+					alert("Enviado com succeso! Certifique-se de verificar sua caixa de entrada (email) ou spam.");
           location.reload();
 				},
 				error: function(jqXHR, textStatus, errorThrown) {
