@@ -728,7 +728,7 @@
                
                  <div class="col-md-6"> <div class="form-group">
                    <label for="numParticipants" style="color:white">Nº de participantes</label>
-                   <input type="number" class="form-control" id="numParticipants" name="numParticipants" required>
+                   <input type="number" oninput="this.value = Math.max(1, this.value);" min="1" class="form-control" id="numParticipants" name="numParticipants" required>
                  </div></div>
         
                  <div class="col-md-6"> <div class="form-group">
