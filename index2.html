@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Todo Sonho Tem um Preço</title>
+    <meta name="description" content />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/slicknav.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/nice-select.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* Hide the modal by default */
+      #modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+
+      /* Style the modal content */
+      #modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+      }
+
+      /* Style the modal header */
+      #modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      /* Style the modal close button */
+      #close-btn {
+        font-size: 30px;
+        font-weight: bold;
+        color: #aaa;
+        cursor: pointer;
+        border: none;
+        background: none;
+      }
+
+      /* Add hover effect to the close button */
+      #close-btn:hover {
+        color: black;
+      }
+
+      /* Style the form labels */
+      form label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      /* Style the form inputs */
+      form input[type="text"],
+      form input[type="email"],
+      form input[type="tel"],
+      form textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+
+      /* Style the modal body */
+      #modal-body {
+        margin-bottom: 20px;
+      }
+
+      /* Add animation to the modal */
+      #modal.show {
+        display: block;
+        animation: slide-in 0.5s forwards;
+      }
+
+      /* Define the slide-in animation */
+      @keyframes slide-in {
+        from {
+          opacity: 0;
+          transform: translateY(-100%);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+
+      .team-card {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 30px;
+  opacity: 1;
+}
+
+.card-img-top {
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 30px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card-title,
+.card-text {
+  margin-bottom: 20px;
+}
+
+.card:hover .card-img-top {
+  opacity: 0.5;
+}
+
+.card:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-title.back,
+.card-text {
+  opacity: 1;
+  color: white;
+}
+
+    </style>
+
+    <script defer referrerpolicy="origin" src="js/s.js"></script>
+    <script nonce="2cdebbd9-cd3d-4ac2-ad2b-c47952ab2f88" src="js/mains.js"></script>
+  </head>
+  <body class="body-bg" style="visibility: hidden;">
+    <header>
+      <div class="header-area header-transparent">
+        <div class="main-header header-sticky">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-xl-2 col-lg-2">
+                <!-- <div class="logo mobile">
+                  <a href="index.html"
+                    ><img src="images/logo.png" style="height: 80px" alt
+                  /></a>
+                </div> -->
+              </div>
+              <div class="col-xl-10 col-lg-10">
+                <div class="main-menu f-right d-none d-lg-block">
+                  <nav>
+                    <ul id="navigation">
+                      <li><a href="#home">Início</a></li>
+                      <li><a href="#oradores">Oradores</a></li>
+                      <li><a href="#agenda">Agenda</a></li>
+                      <li><a href="#localizaco">Localização</a></li>
+
+                      <li><a href="#contacto">Contacto</a></li>
+                      <li>
+                        <div
+                          class="header-right-btn f-right ml-15 d-none d-xl-inline-block"
+                        >
+                          <a href="#inscreve" class="header-btn modal-btn"
+                            >inscreva-se<i class="ti-arrow-right"></i>
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+
+              <div class="col-12">
+                
+                <div class="mobile_menu d-block d-lg-none">
+                   
+                </div>
+             
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="slider-area">
+        <div class="slider-active">
+          <div
+            class="single-slider slider-height slider-bg1 d-flex align-items-center"
+          >
+            <div class="container position-relative">
+              <div class="row">
+                <div class="col-md-12 text-center" style="margin-top:500px">
+                  <div class="hero-caption">
+                    <a href="#inscreve" class="btn_01 modal-btn inscrever" style="color:#000; background: #ffbd00;font-size:25px;"><span style="color:#000;" > inscreva-se</span></a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- <div class="hero-footer" style="margin-top:1000px">
+                <h4>1-2 de Julho 2023</h4>
+                <p>Centro de Conferências de Belas – CCB</p>
+                <a href="#" class="btn_01 modal-btn">Confirma Presença</a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="count-down-area top-padding">
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-xl-4 col-lg-4 col-md-6 text-center">
+                <img src="images/realizacao.png" alt="" class="img-fluid" />
+
+                <img src="images/cumbi.png" alt="" class="img-fluid"   />
+              <div class="section-tittle mb-40">
+               
+                <a href="#inscreve" class="btn_1 mt-20 " style="margin-top: 30px; background-color: #fff;"
+                  >inscreva-se<i class="ti-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-7 col-md-12">
+              <div class="section-tittle mb-40" style="color: white">
+                <h2>CONCEITO</h2>
+                <p style="color: white">
+                  <strong> Todo Sonho Tem Um Preço </strong>é uma conferência
+                  nacional de jovens empresários angolanos criada pela empresa
+                  Cumbi Group em 2017 para incentivar e impulsionar jovens a
+                  investirem nos seus sonhos e projectos empresariais
+                </p>
+                <p style="color: white">
+                  O projecto tem como objectivo central de potencializar e criar
+                  soluções para a classe empresarial angolana e formar uma rede
+                  de networking estável para todos os sectores.
+                </p>
+              </div>
+
+              <div class="count-down-wrapper">
+                <div class="row justify-content-between">
+                  <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4">
+                    <div class="single mb-30">
+                      <div class="single-counter">
+                        <span class="counter">2</span>
+                      </div>
+                      <div class="pera-count">
+                        <p>Dias do Evento</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4">
+                    <div class="single mb-30">
+                      <div class="single-counter">
+                        <span class="counter">3000</span>
+                      </div>
+                      <div class="pera-count">
+                        <p>Convidados</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-md-4 col-sm-4">
+                    <div class="single mb-30">
+                      <div class="single-counter">
+                        <span class="counter">6</span>
+                        <p class>+</p>
+                      </div>
+                      <div class="pera-count">
+                        <p>Patrocinadores</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <main style='  background-image: url("images/starry-night-sky.png"); 
+          
+    height: 100%; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover; ' >
+      <section class=" container team-area section-padding">
+        <div class="container">
+
+
+
+
+          <div class="row justify-content-center">
+            <div class="cl-xl-12">
+              <div
+                class="section-tittle text-center mb-40 d-flex justify-content-between flex-wrap align-items-center"
+              >
+                <h2 id="oradores">Oradores</h2>
+                <a href="#" class="btn_01"
+                  >Ver Todos<i class="ti-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="team-active">
+                <div class="single-team" >
+                   <div class="card team-card" >
+                      <img class="card-img-top" src="images/salimoAbdula.png" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title mt-3">Salimo Abdul</h5>
+                        <img style="margin-top: -30px;" src="images/salimoAbdulaLocal.png" class="img-fluid" />
+                        <div class="card-overlay">
+                          <h5 class="card-title back">SALIMO AMAD ABDULA</h5>
+                          <p class="card-text" style="text-align: justify;">nasceu a 18 de Junho de 1963, em Quelimane, província da Zambézia. Empresário de sucesso e líder da Intelec Holdings (grupo empresarial com 20 anos de operações em Moçambique).
+                           </p>
+                           <p class="card-text" style="text-align: justify;">Presidente de Conselho de Administração da Vodacom Moçambique, entre 2017 e 2020, cargo que também ocupou entre 2009 e 2011, bem como entre 2013 e 2015;
+                            E outros.</p>
+                       </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="single-team" >
+                  <div class="card team-card" >
+                     <img class="card-img-top" src="images/aridelmotexeira.png" alt="Card image cap">
+                     <div class="card-body">
+                       <h5 class="card-title mt-3">Aridelmo Texeira</h5>
+                       <img style="margin-top: -30px;" src="images/aridelmotexieraLocal.png" class="img-fluid" />
+                       <div class="card-overlay">
+                         <h5 class="card-title back">ARIDELMO TEXEIRA</h5>
+                         <p class="card-text" style="text-align: justify;">é executivo e empreendedor há mais de 25 anos. É um dos Fundadores da FUCAPE Business School, que se consolidou como uma das melhores escolas de negócios de padrão internacional do Brasil, desde 2010, 
+                          está entre as 10 melhores Instituições de Ensino Superior do Brasil. A instituição está presente em 11 Estados do país com programas de Graduação, MBA, Mestrado e Doutorado.
+                          </p> </div>
+                     </div>
+                   </div>
+               </div>
+
+
+               <div class="single-team" >
+                <div class="card team-card" >
+                   <img class="card-img-top" src="images/claudioAlexandre.png" alt="Card image cap">
+                   <div class="card-body">
+                     <h5 class="card-title mt-3">Claudio Alexandre</h5>
+                     <img style="margin-top: -30px;" src="images/claudioAlexandreLocal.png" class="img-fluid" />
+                     <div class="card-overlay">
+                       <h5 class="card-title back">CLÁUDIO ALEXANDRE</h5>
+                       <p class="card-text" style="text-align: justify;">é o CEO da EXCLUSIVO LUSO REAL ESTATE GROUP, a maior plataforma de investimentos angolanos (lusófono) no ramo imobiliário em Portugal.</p>
+                      <p class="card-text" style="text-align: justify;">Jovem/senhor empreendedor, especialista em investimentos imobiliários no mercado internacional mais propriamente em Portugal, representando os interesses de diversos clientes angolanos, Moçambicanos, Brasileiros (lusófonos).</p>
+                      
+                      </div>
+                   </div>
+                 </div>
+             </div>
+
+
+             <div class="single-team" >
+              <div class="card team-card" >
+                 <img class="card-img-top" src="images/nadirTati.png" alt="Card image cap">
+                 <div class="card-body">
+                   <h5 class="card-title mt-3">Nadir Tati</h5>
+                   <img style="margin-top: -30px;" src="images/claudioAlexandreLocal.png" class="img-fluid" />
+                   <div class="card-overlay">
+                     <h5 class="card-title back">NADIR TATI</h5>
+                     <p class="card-text" style="text-align: justify;">Nascida em Angola, NADIR TATI é estilista, designer de moda e consultora de imagem que busca trazer em suas peças traços da cultura de seu país. Além de ser a pessoa mais importante na história da moda africana, ela é formada em Sociologia e Criminalística, defensora da arte africana e dos direitos humanos.</p>
+                    <p class="card-text" style="text-align: justify;">A diva já apresentou sua arte em diversos locais importantes para a moda, entre eles, Lisboa, Nova York e Berlim. Sua mais recente exposição foi em Luanda, onde apresentou a coleção “Africa Yami” (Minha África)..</p>
+                    
+                    </div>
+                 </div>
+               </div>
+           </div>
+
+
+
+           <div class="single-team" >
+            <div class="card team-card" >
+               <img class="card-img-top" src="images/wilsonGanga.png" alt="Card image cap">
+               <div class="card-body">
+                 <h5 class="card-title mt-3">Wilson Ganga</h5>
+                 <img style="margin-top: -30px;" src="images/claudioAlexandreLocal.png" class="img-fluid" />
+                 <div class="card-overlay">
+                   <h5 class="card-title back">WILSON GANGA</h5>
+                   <p class="card-text" style="text-align: justify;">WILSON GANGA (Lunda Sul, 26 de
+                    Julho de 1992) é um empresário angolano do ramo das novas tecnologias, fundador de várias empresas em Angola, entre as quais a pioneira Tupuca.</p>
+                  <p class="card-text" style="text-align: justify;">Distinguido com o prémio Empreendedor do Ano, em 2017, pelos Prémios Sirius, da empresa Deloitte e nomeado uma das pessoas mais influentes do ecossistema africano de startups, pela revista Digest Africa, em 2021.</p>
+                  
+                  </div>
+               </div>
+             </div>
+         </div>
+
+
+         <div class="single-team" >
+          <div class="card team-card" >
+             <img class="card-img-top" src="images/LineuCandeiro.png" alt="Card image cap">
+             <div class="card-body">
+               <h5 class="card-title mt-3">Lineu Candiero</h5>
+               <img style="margin-top: -30px;" src="images/claudioAlexandreLocal.png" class="img-fluid" />
+               <div class="card-overlay">
+                 <h5 class="card-title back">LINEU CANDIEIRO</h5>
+                 <p class="card-text" style="text-align: justify;">PCA do Grupo Lin e Presidente da Associação Nacional de Jovens Empresários (ANJE). LINEU CANDIEIRO, figura na lista dos 10 maiores empresários moçambicanos, gradualmente, conquista lugares cimeiros no sector privado nacional. Um jovem com uma visão de lince que faz de si um visionário com ambições que vão além de Moçambique. </p>
+                
+                </div>
+             </div>
+           </div>
+       </div>
+
+
+       <div class="single-team" >
+        <div class="card team-card" >
+           <img class="card-img-top" src="images/IsaacCandundo.png" alt="Card image cap">
+           <div class="card-body">
+             <h5 class="card-title mt-3">Issac Candundo</h5>
+             <img style="margin-top: -30px;" src="images/claudioAlexandreLocal.png" class="img-fluid" />
+             <div class="card-overlay">
+               <h5 class="card-title back">ISSAC CANDUNDO</h5>
+               <p class="card-text" style="text-align: justify;">ISSAC CANGUNDO é o anfitrião da Conferência Cristã sobre o Crescimento Empresarial. Isaac tem um coração de servo. <br> Há uma década que realiza eventos sobre finanças, negócios e empreendedorismo. <br>Os seus eventos já alcançaram milhares de pessoas, criando uma dezena de empresários com negócios bem-sucedidos.<br>Isaac Cangundo é Director Executivo da Legacy House — Gestão e Participação.</p>
+          
+              </div>
+           </div>
+         </div>
+     </div>
+
+
+
+
+               
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </main>
+    <main>
+      <section class="about-area" id="agenda">
+        <div class="container" >
+          <div class="row align-items-center">
+            <div class="col-xxl-7 col-xl-7 col-lg-6 col-md-8">
+              <div class="about-img">
+                <img src="images/about1.jpg" alt />
+              </div>
+            </div>
+            <div class="offset-xxl-1 col-xxl-4 col-xl-5 col-lg-6 col-md-9" >
+              <div class="about-caption">
+                <div class="section-tittle mb-25" style="color: white" >
+                  <h2>
+                    <span>EVENTO <br /></span>
+                  </h2>
+                  <p style="color: white">
+                    O evento sucederá nos dias 1 e 2 de Junho no Centro de
+                    Conferências de Belas – CCB. As actividades incluem uma
+                    Feira para exibição de empresas, a Conferência com os
+                    oradores e culminará com uma Gala exclusiva no último dia
+                  </p>
+
+                  <p style="color: white">
+                    <strong>Dia 1 de Junho</strong> (Conferência: 09h – 14h /
+                    Feira: 09h – 18h)
+                  </p>
+                  <p style="color: white">
+                    <strong>Dia 2 de Junho</strong> (Conferência: 09h – 14h /
+                    Feira: 09h – 18h / Gala: 19h.30 – 23h.30)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+          <main style='  background-image: url("images/starry-night-sky.png"); 
+          
+          height: 100%; 
+          background-position: center; 
+          background-repeat: no-repeat; 
+          background-size: cover; ' >
+          <section class="container">
+            <div class="row" style="margin-top: 200px">
+              <div class="col-md-6 text-center">
+                <div class="section-tittle mb-25" style="color: white">
+                  <h2>
+                    <span>CONFERÊNCIA <br /></span>
+                  </h2>
+                  <p style="color: white">
+                    A conferência será o momento de debates, workshop e
+                    apresentação de oradores nacionais e internacionais que
+                    partilharão suas experiências.
+                  </p>
+                  <p style="color: white">
+                    O evento será para 3000 pessoas e se fará acompanhar de um
+                    coffee break
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6 text-center">
+                <div class="section-tittle mb-25" style="color: white">
+                  <h2>
+                    <span>FEIRA <br /></span>
+                  </h2>
+                  <p style="color: white">
+                    Para a feira, serão montados 100 stands entre 9m a 18m
+                    quadrado, onde as empresas estarão divididas por categorias,
+                    desde o quintal do CCB até o hall de entrada
+                  </p>
+
+                  <p style="color: white">
+                    A feira estará aberta das 8h às 18h e contará com uma praça
+                    de alimentação.
+                  </p>
+
+                  <p style="color: white">
+                    Cada empresa deverá trazer o seu merchandising.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div
+                  class="section-tittle mb-25 text-center"
+                  style="color: white"
+                >
+                  <h2 class="text-center">
+                    <span>GALA <br /></span>
+                  </h2>
+                  <p style="color: white">
+                    A gala será um momento intimista com buffet e bar aberto,
+                    para 400 pessoas, onde iremos homenagear os patrocinadores,
+                    empresas que apoiam a juventude, empresas de
+                  </p>
+
+                  <p style="color: white">
+                    destaque, oradores e o Executivo angolano. O momento servirá
+                    para maior criação de networking entre os grandes
+                    fomentadores de emprego e o estado angolano, onde o acesso
+                    será restrito, ou seja, por convite direccionado.
+                  </p>
+
+                  <p style="color: white">
+                    Ocorrerá um leilão, cujo os fundos arrecadados serão para
+                    apoiar uma instituição carenciada
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <main>
+      <section class="shedule-area section-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-5 col-lg-6 col-md-6">
+              <div class="section-tittle mb-30">
+                <h2>Hórarios</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-11">
+              <div class="nav-button">
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a
+                      class="nav-link active"
+                      id="nav-one-tab"
+                      data-bs-toggle="tab"
+                      href="#nav-one"
+                      role="tab"
+                      aria-controls="nav-one"
+                      aria-selected="true"
+                      >1 Junho</a
+                    >
+
+                    <a
+                      class="nav-link"
+                      id="nav-three-tab"
+                      data-bs-toggle="tab"
+                      href="#nav-three"
+                      role="tab"
+                      aria-controls="nav-three"
+                      aria-selected="false"
+                      >2 Junho</a
+                    >
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="tab-content" id="nav-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="nav-one"
+              role="tabpanel"
+              aria-labelledby="nav-one-tab"
+            >
+              <div class="row justify-content-center">
+                <div class="col-lg-11">
+                  <div class="shedule-wrapper">
+                    <div class="single-items">
+                      <div class="shedule-items">
+                        <div class="shedule-left">
+                          <div class="job-tittle">
+                            <a href="job_details.html"><h4>Conferência</h4></a>
+                          </div>
+                        </div>
+                        <div class="price">
+                          <span>09h – 14h / Feira: 09h – 18h</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="tab-pane fade"
+              id="nav-three"
+              role="tabpanel"
+              aria-labelledby="nav-three-tab"
+            >
+              <div class="row justify-content-center">
+                <div class="col-lg-11">
+                  <div class="shedule-wrapper">
+                    <div class="single-items">
+                      <div class="shedule-items">
+                        <div class="shedule-left">
+                          <div class="job-tittle">
+                            <a href="job_details.html"><h4>Conferência</h4></a>
+                          </div>
+                        </div>
+                        <div class="price">
+                          <span
+                            >09h – 14h / Feira: 09h – 18h / Gala: 19h.30 –
+                            23h.30</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="row">
+       <div class="col-md-12">
+        <img src="images/organizadores.png" class="img-fluid" />
+       </div>
+      </div>
+
+      <div class="section-tittle text-center mb-30 mt-30" >
+        <h2 id="inscreve">inscreva-se</h2>
+      </div>
+    </div>
+        <div class="container" style="margin-top: 40px;" >
+            <div class="card" style="padding:20px;background-color: #0E0E0E;" >
+              <div class="card-body" >
+                <div class="container">
+                <form id="myForm">
+                  <div class="row">
+                   <div class="col-md-6"> <div class="form-group">
+                     <label for="firstName" style="color:white">Primeiro nome</label>
+                     <input type="text" class="form-control" id="firstName" name="firstName" required>
+                   </div></div>
+                <div class="col-md-6">     <div class="form-group">
+                   <label for="lastName" style="color:white">Último nome</label>
+                   <input type="text" class="form-control" id="lastName" name="lastName" required>
+                 </div></div>
+                 <div class="col-md-6">  <div class="form-group">
+                   <label for="email" style="color:white">Email</label>
+                   <input type="email" class="form-control" id="email" name="email" required>
+                 </div></div>
+            
+                 <div class="col-md-6"> <div class="form-group">
+                   <label for="phoneNumber" style="color:white">Número telefónico</label>
+                   <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" required>
+                 </div></div>
+                 <div class="col-md-6">  <div class="form-group">
+                   <label for="companyName" style="color:white">Nome da empresa</label>
+                   <input type="text" class="form-control" id="companyName" name="companyName">
+                 </div></div>
+               
+                 <div class="col-md-6"><div class="form-group">
+                   <label for="jobTitle" style="color:white">Função</label>
+                   <input type="text" class="form-control" id="jobTitle" name="jobTitle">
+                 </div></div>
+                 
+                 <div class="col-md-12"> <div class="form-group">
+                  <label for="numParticipants"  style="color:white">Tamanho da empresa</label>
+                  <select class="form-control" id="companySize">
+                    <option value="Micro">Micro</option>
+                    <option value="Média">Média</option>
+                    <option value="Grane">Grande</option>
+
+                  </select>
+                </div></div>
+               
+                 <div class="col-md-6"> <div class="form-group">
+                   <label for="numParticipants" style="color:white">Nº de participantes</label>
+                   <input type="number" oninput="this.value = Math.max(1, this.value);" min="1" class="form-control" id="numParticipants" name="numParticipants" required>
+                 </div></div>
+        
+                 <div class="col-md-6"> <div class="form-group">
+                   <label for="brandExhibit" style="color:white">Deseja expor a sua marca?</label>
+                   <div class="form-check">
+                     <input class="form-check-input" type="checkbox" id="brandExhibit" name="brandExhibit">
+                     <label class="form-check-label" for="brandExhibit" style="color:white">
+                       Sim
+                     </label>
+                   </div>
+                 </div></div>
+                
+                <div class="col-md-12 text-center">
+                 <button type="submit" class="btn btn-primary">Enviar</button>
+                  <br>
+                 <p style="color:#ffbd00;margin-top: 15px;">Certifique-se de verificar sua caixa de entrada (email) ou spam.</p>
+        
+                </div>
+
+               </div>
+               </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      <section class="brand-area top-padding">
+        <div class="container">
+         
+           
+        
+
+          <div class="row wrapper-brand justify-content-center">
+            <div class="col-xl-5 col-lg-6 col-md-6">
+              <div class="section-tittle text-center mb-30">
+                <h2>Patrocinadores</h2>
+              </div>
+            </div>
+            <div class="col-xl-12">
+              <div class="brand-active pt-50 pb-40">
+                <div class="single-brand">
+                  <img src="images/brand.jpeg" class="img-fluid"  style="padding-right:10px" alt />
+                </div>
+                <div class="single-brand">
+                  <img src="images/brand2.jpeg" class="img-fluid" style="padding-right:10px" alt />
+                </div>
+                <div class="single-brand">
+                  <img src="images/brand3.png" class="img-fluid" style="padding-right:10px"  alt />
+                </div>
+                <div class="single-brand">
+                  <img src="images/brand4.png" class="img-fluid" style="padding-right:10px"  alt />
+                </div>
+                <div class="single-brand">
+                  <img src="images/brand5.png" class="img-fluid" style="padding-right:10px"  alt />
+                </div>
+
+                <div class="single-brand">
+                  <img src="images/brand6.png" class="img-fluid" style="padding-right:10px"  alt />
+                </div>
+                <!-- <div class="single-brand">
+                  <img src="images/brand2.png" class="img-fluid" style="padding-right:10px"  alt />
+                </div> -->
+                <!-- <div class="single-brand">
+                  <img src="images/brand3.png" class="img-fluid" style="padding-right:10px"  alt />
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- <footer>
+      <div class="footer-area footer-padding">
+        <div class="footer-wrapper">
+          <div class="container">
+            <div class="row d-flex justify-content-between">
+              <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                <div class="single-footer-caption mb-50">
+                  <div class="single-footer-caption mb-30">
+                    <div class="footer-logo mb-25">
+                      <a href="index.html"
+                        ><img src="images/logo2_footer.png" alt
+                      /></a>
+                    </div>
+                    <div class="footer-tittle">
+                      <div class="footer-pera">
+                        <p>
+                          Duis aute irure dolor inasfa reprehenderit in
+                          voluptate velit esse cillum. Explicabo, maiores
+                          quisquam numquam quia reiciendis sit, accus antium
+                          atque ex animi perspiciatis ab odit earum assumenda
+                          aliquid santium.
+                        </p>
+                      </div>
+                    </div>
+
+                    <ul class="footer-social">
+                      <li>
+                        <a class="fb" href="https://bit.ly/sai4ull"
+                          ><i class="fab fa-facebook"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a class="yt" href="#"
+                          ><i class="fab fa-youtube"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a class="lnk" href="#"
+                          ><i class="fab fa-linkedin-in"></i
+                        ></a>
+                      </li>
+                      <li>
+                        <a class="ins" href="#"
+                          ><i class="fab fa-instagram"></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-4 col-sm-5">
+                <div class="single-footer-caption mb-50">
+                  <div class="footer-tittle">
+                    <h4>Contact Us</h4>
+                    <ul>
+                      <li>
+                        <a href="#">3968 Carson Street, San Diego, CA 92101</a>
+                      </li>
+                      <li>
+                        <a href="#"
+                          ><span
+                            class="__cf_email__"
+                            data-cfemail="4920272f26092c3f2c273d26672a2624"
+                            >[email protected]</span
+                          ></a
+                        >
+                      </li>
+                      <li class="number"><a href="#">10 (85) 980 3673</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-8 col-sm-11">
+                <div class="single-footer-caption mb-50">
+                  <div class="footer-tittle">
+                    <h4>Subscribe Newsletter</h4>
+                    <p>
+                      raising a heavy fur muff that covered the whole of her
+                      lower arm towards the viewer.
+                    </p>
+                  </div>
+
+                  <div class="footer-form">
+                    <div id="mc_embed_signup">
+                      <form
+                        target="_blank"
+                        action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&id=92a4423d01"
+                        method="get"
+                        class="subscribe_form relative mail_part"
+                        novalidate="true"
+                      >
+                        <input
+                          type="email"
+                          name="EMAIL"
+                          id="newsletter-form-email"
+                          placeholder="  Enter your email"
+                        />
+                        <div class="form-icon">
+                          <button
+                            type="submit"
+                            name="submit"
+                            id="newsletter-submit"
+                            class="email_icon newsletter-submit button-contactForm"
+                          >
+                            Subscribe
+                          </button>
+                        </div>
+                        <div class="mt-10 info"></div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-bottom-area">
+            <div class="container">
+              <div class="footer-border">
+                <div class="row d-flex align-items-center">
+                  <div class="col-xl-12">
+                    <div class="footer-copy-right text-center">
+                      <p>
+                        Copyright ©
+                        <script
+                          data-cfasync="false"
+                          src="js/email-decode.min.js"
+                        ></script>
+                        <script>
+                          document.write(new Date().getFullYear());
+                        </script>
+                        2023 All rights reserved | This template is made with
+                        <i
+                          class="fa fa-heart color-danger"
+                          aria-hidden="true"
+                        ></i>
+                        by
+                        <a
+                          href="https://colorlib.com"
+                          target="_blank"
+                          rel="nofollow noopener"
+                          >Colorlib</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer> -->
+
+    <div id="back-top">
+      <a class="wrapper" title="Go to Top" href="#">
+        <div class="arrows-container">
+          <div class="arrow arrow-one"></div>
+          <div class="arrow arrow-two"></div>
+        </div>
+      </a>
+    </div>
+
+    <script src="js/modernizr-3.5.0.min.js"></script>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB13ZAvCezMx5TETYIiGlzVIq65Mc2FG5g"></script>
+
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      // Get the modal and the button that opens it
+      var modal = document.getElementById("modal");
+      var btn = document.getElementByClass("modal-btn");
+
+      // Get the close button and the modal content
+      var closeBtn = document.getElementById("close-btn");
+      var modalContent = document.getElementById("modal-content");
+
+      // When the user clicks on the button, show the modal
+      btn.onclick = function () {
+        modal.classList.add("show");
+      };
+
+      // When the user clicks on the close button, hide the modal
+      closeBtn.onclick = function () {
+        modal.classList.remove("show");
+      };
+
+      // When the user clicks outside the modal, hide it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.classList.remove("show");
+        }
+      };
+    </script>
+
+<script>
+  window.addEventListener('load', function() {
+    document.body.style.visibility = 'visible';
+  });
+</script>
+
+<script>
+  $(document).ready(function() {
+  $("#myForm").submit(function(event) {
+  event.preventDefault();
+  var form = $(this);
+  var url = "https://glab-api.vercel.app/api/cumbi"; // Replace with your API endpoint URL			
+  const firstName = document.getElementById("firstName").value;
+const lastName = document.getElementById("lastName").value;
+const email = document.getElementById("email").value;
+const phoneNumber = document.getElementById("phoneNumber").value;
+const companyName = document.getElementById("companyName").value;
+const jobTitle = document.getElementById("jobTitle").value;
+const numParticipants = document.getElementById("numParticipants").value;
+const brandExhibit = document.getElementById("brandExhibit").value;
+const companySize = document.getElementById("companySize").value;
+
+
+// Make an AJAX request to the server
+
+
+// Set the data to be sent in the request body
+const data = JSON.stringify({ firstName,
+lastName,
+email,
+phoneNumber,
+companyName,
+jobTitle,
+numParticipants,
+companySize,
+brandExhibit,});
+
+
+
+  $.ajax({
+  	    url: url,  
+       method: 'POST',
+       contentType: 'application/json',
+				data: data,
+				success: function(data) {
+					alert("Enviado com succeso! Certifique-se de verificar sua caixa de entrada (email) ou spam.");
+          location.reload();
+				},
+				error: function(jqXHR, textStatus, errorThrown) {
+					alert("Tenta Novamente!");
+				}
+			});
+		});
+	});
+
+    
+
+</script>
+
+  </body>
+</html>
