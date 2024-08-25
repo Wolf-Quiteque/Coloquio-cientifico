@@ -5072,7 +5072,7 @@ a.footer-call-btn:hover p small {
 }
 
 .loader div {
-    background-color: var(--button-color);
+    background-color: var(--yellow-color);
     display: inline-block;
     float: none;
     position: absolute;
