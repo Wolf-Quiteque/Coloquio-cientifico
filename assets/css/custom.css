@@ -8,8 +8,8 @@
     --text-color: #6d6c6c;
     --button-color: #3500FC;
     --light-blue: #622EEF;
-    --yellow-color: #fdb913;
-    --pink-color: #ec398b;
+    --yellow-color: #FDB913;
+    --pink-color: #EC398B;
     --dark-blue: #622EEF;
 }
 
@@ -326,7 +326,7 @@ h6 {
 
 .banner-main-section::after {
     content: "";
-    background: var(--button-color);
+    background: #FDB913;
     opacity: .7;
     width: 100%;
     height: 1000px;
@@ -356,7 +356,7 @@ h6 {
     font-size: 18px;
     line-height: 30px;
     font-weight: 700;
-    color: var(--yellow-color);
+    color: #fff;
     display: block;
     margin-bottom: 42px;
 }
