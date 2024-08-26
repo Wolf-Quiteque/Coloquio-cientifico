@@ -73,7 +73,7 @@ h6 {
     font-size: 20px;
     line-height: 32px;
     font-weight: 700;
-    color: var(--button-color);
+    color: var(--yellow-color);
     display: block;
     letter-spacing: 4px;
 }
@@ -86,7 +86,7 @@ h6 {
     padding: 30px 41px 30px 40px;
     display: inline-block;
     text-decoration: none;
-    background: var(--button-color);
+    background: var(--secondary-color);
     color: var(--primary-color);
     transition: .3s ease-in-out;
 }
@@ -523,7 +523,7 @@ h6 {
     font-size: 40px;
     line-height: 30px;
     font-weight: 700;
-    color: var(--button-color);
+    color: var(--yellow-color);
     margin-left: -5px;
     margin-top: -4px;
 }
@@ -659,7 +659,7 @@ h6 {
 
 .counter-sec ul li {
     padding: 0 18px;
-    border-left: 5px solid #cccccc;
+    border-left: 5px solid #CCCCCC;
 }
 
 .counter-sec ul li::before {
@@ -669,7 +669,7 @@ h6 {
     top: 0;
     width: 5px;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(37, 98, 255, 1) 0%, rgba(41, 137, 216, 0.5) 50%, rgba(32, 124, 202, 0.49) 51%, rgba(37, 98, 255, 0) 100%);
+    background: linear-gradient(to bottom, rgba(253, 185, 19, 1) 0%, rgba(253, 185, 19, 0.5) 50%, rgba(253, 185, 19, 0.49) 51%, rgba(253, 185, 19, 0) 100%), #CCCCCC;
 }
 
 /* counter section styling end here */
@@ -691,11 +691,11 @@ h6 {
 }
 
 .event-right-con .nav-link:hover span {
-    color: var(--button-color);
+    color: var(--yellow-color);
 }
 
 .event-right-con .nav-link.active span {
-    color: var(--button-color);
+    color: var(--yellow-color);
 }
 
 .event-right-con .nav-link small {
@@ -734,7 +734,7 @@ h6 {
     content: "";
     width: 63%;
     height: 2px;
-    background: var(--light-blue);
+    background: var(--yellow-color);
     position: absolute;
     bottom: -16px;
     left: 50%;
@@ -809,7 +809,7 @@ h6 {
     align-items: center;
     font-size: 16px;
     font-weight: 700;
-    color: var(--button-color);
+    color: var(--yellow-color);
     border-radius: 50%;
     background-color: var(--primary-color);
     box-shadow: inset 0 0 0 1px var(--button-color);
@@ -849,11 +849,9 @@ h6 {
 /* event section styling end here */
 /* speaker section styling start here */
 .speakers-main-section {
-    background: url(../images/speakers-bg-img.jpg) no-repeat center;
-    background-size: cover;
-    height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(253, 185, 19, 0.6));
+  height: 100%;
 }
-
 .speaker-box figure {
     width: 350px;
     height: 350px;
@@ -863,15 +861,15 @@ h6 {
 }
 
 .speaker-box figure::before {
-    content: "";
-    background: radial-gradient(ellipse at center, rgba(53, 0, 252, 0) 0%, rgba(53, 0, 252, 1) 100%);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: none;
-    transition: .4s ease-in-out;
+  content: "";
+  background: radial-gradient(ellipse at center, rgba(253, 185, 19, 0) 0%, rgba(253, 185, 19, 1) 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  transition: .4s ease-in-out;
 }
 
 .speaker-box:hover figure::before {
@@ -928,7 +926,7 @@ h6 {
 }
 
 .speaker-box a i {
-    color: var(--button-color);
+    color: var(--secondary-color);
 }
 
 .speaker-box a {
@@ -1498,7 +1496,7 @@ h6 {
 
 .registration-main-section .registration-inner-con::after {
     content: "";
-    background: var(--button-color);
+    background: linear-gradient(to bottom, rgba(253, 185, 19, 0.8), rgba(253, 185, 19, 0.6));
     opacity: .7;
     width: 100%;
     height: 100%;
@@ -1552,14 +1550,14 @@ a.footer-call-btn {
 
 .footer-call-btn i {
     font-size: 30px;
-    color: var(--light-blue);
+    color: var(--yellow-color);
 }
 
 .footer-call-btn small {
     font-size: 14px;
     line-height: 16px;
     margin-bottom: 10px;
-    color: var(--light-blue);
+    color: var(--yellow-color);
 }
 
 .footer-call-btn span {
@@ -1614,7 +1612,7 @@ a.footer-call-btn:hover p small {
 
 .footer-box.footer-contact ul li span {
     font-weight: 700;
-    color: var(--light-blue);
+    color: var(--yellow-color);
 }
 
 .footer-box.footer-contact ul li a {
@@ -1635,7 +1633,7 @@ a.footer-call-btn:hover p small {
 }
 
 .footer-social-links ul li a i {
-    color: var(--button-color);
+    color: var(--yellow-color);
 }
 
 .footer-social-links ul li a:hover {
@@ -5132,7 +5130,7 @@ a.footer-call-btn:hover p small {
 
 #button {
     display: inline-block;
-    background-color: var(--button-color);
+    background-color: var(--yellow-color);
     width: 82px;
     height: 82px;
     text-align: center;
@@ -5162,23 +5160,22 @@ a.footer-call-btn:hover p small {
 }
 
 @-webkit-keyframes spineer {
-    from {
-        box-shadow: 0 0 0 0 rgb(53, 0, 252, .99)
-    }
+  from {
+    box-shadow: 0 0 0 0 rgba(253, 185, 19, .99);
+  }
 
-    to {
-        box-shadow: 0 0 0 25px rgb(53, 0, 252, .01)
-    }
+  to {
+    box-shadow: 0 0 0 25px rgba(253, 185, 19, .01);
+  }
 }
 
 @keyframes spineer {
-    from {
-        box-shadow: 0 0 0 0 rgb(53, 0, 252, .99)
-    }
+  from {
+    box-shadow: 0 0 0 0 rgba(253, 185, 19, .99);
+  }
 
-    to {
-        box-shadow: 0 0 0 25px rgb(53, 0, 252, .01)
-    }
+  to {
+    box-shadow: 0 0 0 25px rgba(253, 185, 19, .01);
+  }
 }
-
 /* bottom to top button */
