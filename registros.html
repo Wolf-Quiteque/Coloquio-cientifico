@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários Registrados</title>
+    <style>
+        body {
+            font-family: 'Helvetica', Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        p {
+            text-align: center;
+            font-size: 18px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        .pagination {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .pagination button {
+            padding: 10px;
+            margin: 0 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .pagination button:disabled {
+            background-color: #ddd;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <h1>Usuários Registrados</h1>
+    <p>Total de Registros: <span id="total-registrations">0</span></p>
+    <p>Total de Quantidade: <span id="total-quantos">0</span></p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Telefone</th>
+                <th>Quantidade</th>
+                <th>Participação</th>
+            </tr>
+        </thead>
+        <tbody id="user-data">
+            <!-- Dados serão populados aqui -->
+        </tbody>
+    </table>
+
+    <div class="pagination">
+        <button id="prev" disabled>Anterior</button>
+        <button id="next">Próximo</button>
+    </div>
+
+    <script>
+        const apiUrl = 'https://webhostapi.vercel.app/voyage/api/ceccicall';
+        let currentPage = 1;
+        const rowsPerPage = 5;
+        let userData = [];
+        let totalQuantos = 0;
+
+        document.getElementById('prev').addEventListener('click', () => changePage(-1));
+        document.getElementById('next').addEventListener('click', () => changePage(1));
+
+        function fetchUserData() {
+            fetch(apiUrl, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                userData = data;
+                totalQuantos = userData.reduce((acc, user) => acc + parseInt(user.quantos || 0), 0);
+                document.getElementById('total-registrations').innerText = userData.length;
+                document.getElementById('total-quantos').innerText = totalQuantos;
+                renderTable();
+            })
+            .catch(error => console.error('Erro ao buscar dados:', error));
+        }
+
+        function renderTable() {
+            const start = (currentPage - 1) * rowsPerPage;
+            const end = start + rowsPerPage;
+            const paginatedData = userData.slice(start, end);
+
+            const tbody = document.getElementById('user-data');
+            tbody.innerHTML = '';
+
+            paginatedData.forEach(user => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${user.nome}</td>
+                    <td>${user.sobrenome}</td>
+                    <td>${user.telefone}</td>
+                    <td>${user.quantos}</td>
+                    <td>${user.participacao}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            document.getElementById('prev').disabled = currentPage === 1;
+            document.getElementById('next').disabled = end >= userData.length;
+        }
+
+        function changePage(direction) {
+            currentPage += direction;
+            renderTable();
+        }
+
+        fetchUserData();
+    </script>
+</body>
+</html>
